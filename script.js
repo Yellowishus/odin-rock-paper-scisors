@@ -14,6 +14,9 @@ function getComputerChoice(){
     return getRandomInt(3);
 }
 
+//function that asks user to write choice and then converts it to corresponding
+//number (for example user input rock equals 0)
+
 function getHumanChoice(){
     let humanChoice = prompt("Enter your figure:")
     switch(humanChoice){
