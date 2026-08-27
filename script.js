@@ -38,7 +38,10 @@ let computerScore = 0;
 
 // plays a round of a game and increments scores when somebody wons
 
-function playRound (humanChoice, computerChoice){
+function playRound (){
+    let computerChoice = getComputerChoice();
+    let humanChoice = getHumanChoice();
+
     if(humanChoice == computerChoice){
         console.log("Draw")
     }
@@ -77,12 +80,30 @@ function playRound (humanChoice, computerChoice){
     }
 }
 
-let computerChoice = getComputerChoice();
-let humanChoice = getHumanChoice();
 
-console.log("HCh = " + humanChoice + ", " + "CCh = " + computerChoice);
 
-playRound(humanChoice, computerChoice)
+function playGame(){
+    let gameStatus = true;
+    while (gameStatus == true){
+        let continueGame = prompt("Do you want to play another round?")
+            switch(continueGame){
+                case "yes":
+                    gameStatus = true;
+                    break;
+                case "no":
+                    gameStatus = false;
+                    break;
+            }
+        if(gameStatus == true){
+            playRound();
+            console.log("Your score = " + humanScore  + ", " + 
+                "Computer score = " + computerScore);
+        }
+        else if(gameStatus == false){
+            console.log("End of a game! Your score = " + humanScore  + ", " + 
+                "Computer score = " + computerScore);
+        }
+    }
+}
 
-console.log("HS = " + humanScore  + ", " + "CS = " + computerScore);
-
+playGame();
