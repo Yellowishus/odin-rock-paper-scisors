@@ -33,6 +33,9 @@ function getHumanChoice(){
     return humanChoice;
 }
 
+let humanScore = 0;
+let computerScore = 0;
+
 let computerChoice = getComputerChoice();
 let humanChoice = getHumanChoice();
 console.log("HCh = " + humanChoice + ", " + "CCh = " + computerChoice);
