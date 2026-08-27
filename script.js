@@ -36,7 +36,51 @@ function getHumanChoice(){
 let humanScore = 0;
 let computerScore = 0;
 
+function playRound (humanChoice, computerChoice){
+    if(humanChoice == computerChoice){
+        console.log("Draw")
+    }
+    else if (humanChoice == 0){
+        if(computerChoice == 1)
+        {
+            console.log("You lose :<");
+            computerScore += 1;
+        }
+        else if(computerChoice == 2){
+            console.log("You won :>");
+            humanScore += 1;
+        }
+    }
+    else if (humanChoice == 1){
+        if(computerChoice == 2)
+        {
+            console.log("You lose :<");
+            computerScore += 1;
+        }
+        else if(computerChoice == 0){
+            console.log("You won :>");
+            humanScore += 1;
+        }
+    }
+    else if (humanChoice == 2){
+        if(computerChoice == 0)
+        {
+            console.log("You lose :<");
+            computerScore += 1;
+        }
+        else if(computerChoice == 1){
+            console.log("You won :>");
+            humanScore += 1;
+        }
+    }
+}
+
 let computerChoice = getComputerChoice();
 let humanChoice = getHumanChoice();
+
 console.log("HCh = " + humanChoice + ", " + "CCh = " + computerChoice);
+
+playRound(humanChoice, computerChoice)
+
+console.log("HS = " + humanScore  + ", " + "CS = " + computerScore);
 
