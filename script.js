@@ -80,8 +80,6 @@ function playRound (){
     }
 }
 
-
-
 function playGame(){
     let gameStatus = true;
     while (gameStatus == true){
