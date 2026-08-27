@@ -36,6 +36,8 @@ function getHumanChoice(){
 let humanScore = 0;
 let computerScore = 0;
 
+// plays a round of a game and increments scores when somebody wons
+
 function playRound (humanChoice, computerChoice){
     if(humanChoice == computerChoice){
         console.log("Draw")
