@@ -19,6 +19,7 @@ function getComputerChoice(){
 
 function getHumanChoice(){
     let humanChoice = prompt("Enter your figure:")
+    humanChoice = humanChoice.toLowerCase();
     switch(humanChoice){
         case "rock":
             humanChoice = 0;
