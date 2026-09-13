@@ -4,6 +4,21 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: #dde7c7;
+    
+}
+button{
+    background-color: #a7c957;
+    border: 5px solid #6a994e;
+    height: 10vh;
+    width: 10vw;
+    font-size: 46px;
+    border-radius: 20px;
+}
+p{
+    color: #386641;
+    font-size: large;
+    font-family: "lucida console";
 }
 .mainContainer{
     height: 60vh;
