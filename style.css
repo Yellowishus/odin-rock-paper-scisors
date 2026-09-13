@@ -1,0 +1,21 @@
+body{
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.mainContainer{
+    height: 60vh;
+    width: 60vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.buttonsContainer{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
