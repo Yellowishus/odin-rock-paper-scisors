@@ -18,6 +18,26 @@ function getComputerChoice(){
 let humanScore = 0;
 let computerScore = 0;
 
+const scoreInfo = document.getElementById("informationContainer")
+
+function showScore(haveYouWon)
+{
+    let gameInfo
+    if(haveYouWon == true) 
+    {
+        gameInfo = "You won 🥳"
+    }
+    else if (haveYouWon == false)
+    {
+        gameInfo = "You lose 😭"
+    }
+    scoreInfo.innerText =
+    gameInfo + "\n" +
+    "Your score = " + humanScore + " \n" +
+    "Computer score = " + computerScore
+    ;
+}
+
 // plays a round of a game and increments scores when somebody wons
 
 function playRound (humanChoice){
@@ -31,10 +51,12 @@ function playRound (humanChoice){
         {
             console.log("You lose :<");
             computerScore += 1;
+            showScore(false)
         }
         else if(computerChoice == 2){
             console.log("You won :>");
             humanScore += 1;
+            showScore(true)
         }
     }
     else if (humanChoice == 1){
@@ -42,10 +64,12 @@ function playRound (humanChoice){
         {
             console.log("You lose :<");
             computerScore += 1;
+            showScore(false)
         }
         else if(computerChoice == 0){
             console.log("You won :>");
             humanScore += 1;
+            showScore(true)
         }
     }
     else if (humanChoice == 2){
@@ -53,41 +77,31 @@ function playRound (humanChoice){
         {
             console.log("You lose :<");
             computerScore += 1;
+            showScore(false)
         }
         else if(computerChoice == 1){
             console.log("You won :>");
             humanScore += 1;
+            showScore(true)
         }
     }
 }
 
-const scoreInfo = document.getElementById("informationContainer")
-
-function showScore()
-{
-    scoreInfo.innerText =
-    "Your score = " + humanScore + " \n" +
-    "Computer score = " + computerScore
-    ;
-}
 
 const inputRock = document.getElementById("playerInputRock");
 
 inputRock.addEventListener("click", function() {
     playRound(0);
-    showScore();
 })
 
 const inputPaper = document.getElementById("playerInputPaper");
 
 inputPaper.addEventListener("click", function() {
     playRound(1);
-    showScore();
 })
 
 const inputScisors = document.getElementById("playerInputScisors");
 
 inputScisors.addEventListener("click", function() {
     playRound(2);
-    showScore();
 })
