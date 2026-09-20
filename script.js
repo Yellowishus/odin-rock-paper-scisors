@@ -61,20 +61,33 @@ function playRound (humanChoice){
     }
 }
 
+const scoreInfo = document.getElementById("informationContainer")
+
+function showScore()
+{
+    scoreInfo.innerText =
+    "You'r score = " + humanScore + " \n" +
+    "Computer score = " + computerScore
+    ;
+}
+
 const inputRock = document.getElementById("playerInputRock");
 
 inputRock.addEventListener("click", function() {
     playRound(0);
+    showScore();
 })
 
 const inputPaper = document.getElementById("playerInputPaper");
 
 inputPaper.addEventListener("click", function() {
     playRound(1);
+    showScore();
 })
 
 const inputScisors = document.getElementById("playerInputScisors");
 
 inputScisors.addEventListener("click", function() {
     playRound(2);
+    showScore();
 })
