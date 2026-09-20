@@ -14,34 +14,14 @@ function getComputerChoice(){
     return getRandomInt(3);
 }
 
-//function that asks user to write choice and then converts it to corresponding
-//number (for example user input rock equals 0)
-
-function getHumanChoice(){
-    let humanChoice = prompt("Enter your figure:")
-    humanChoice = humanChoice.toLowerCase();
-    switch(humanChoice){
-        case "rock":
-            humanChoice = 0;
-            break;
-        case "paper":
-            humanChoice = 1;
-            break;
-        case "scisors":
-            humanChoice = 2;
-            break;
-    }
-    return humanChoice;
-}
 
 let humanScore = 0;
 let computerScore = 0;
 
 // plays a round of a game and increments scores when somebody wons
 
-function playRound (){
+function playRound (humanChoice){
     let computerChoice = getComputerChoice();
-    let humanChoice = getHumanChoice();
 
     if(humanChoice == computerChoice){
         console.log("Draw")
@@ -81,28 +61,20 @@ function playRound (){
     }
 }
 
-function playGame(){
-    let gameStatus = true;
-    while (gameStatus == true){
-        let continueGame = prompt("Do you want to play another round?")
-            switch(continueGame){
-                case "yes":
-                    gameStatus = true;
-                    break;
-                case "no":
-                    gameStatus = false;
-                    break;
-            }
-        if(gameStatus == true){
-            playRound();
-            console.log("Your score = " + humanScore  + ", " + 
-                "Computer score = " + computerScore);
-        }
-        else if(gameStatus == false){
-            console.log("End of a game! Your score = " + humanScore  + ", " + 
-                "Computer score = " + computerScore);
-        }
-    }
-}
+const inputRock = document.getElementById("playerInputRock");
 
-playGame();
+inputRock.addEventListener("click", function() {
+    alert("ROCK");
+})
+
+const inputPaper = document.getElementById("playerInputPaper");
+
+inputPaper.addEventListener("click", function() {
+    alert("PAPER");
+})
+
+const inputScisors = document.getElementById("playerInputScisors");
+
+inputScisors.addEventListener("click", function() {
+    alert("SCISORS");
+})
