@@ -66,7 +66,7 @@ const scoreInfo = document.getElementById("informationContainer")
 function showScore()
 {
     scoreInfo.innerText =
-    "You'r score = " + humanScore + " \n" +
+    "Your score = " + humanScore + " \n" +
     "Computer score = " + computerScore
     ;
 }
