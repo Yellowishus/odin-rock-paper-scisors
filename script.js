@@ -64,17 +64,17 @@ function playRound (humanChoice){
 const inputRock = document.getElementById("playerInputRock");
 
 inputRock.addEventListener("click", function() {
-    alert("ROCK");
+    playRound(0);
 })
 
 const inputPaper = document.getElementById("playerInputPaper");
 
 inputPaper.addEventListener("click", function() {
-    alert("PAPER");
+    playRound(1);
 })
 
 const inputScisors = document.getElementById("playerInputScisors");
 
 inputScisors.addEventListener("click", function() {
-    alert("SCISORS");
+    playRound(2);
 })
